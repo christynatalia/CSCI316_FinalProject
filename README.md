@@ -43,7 +43,9 @@ SVM is the least optimal model for this dataset. All four models except SVM comp
 
 However, there is some abnormalities here. In theory, it says that the random forest accuracy must be higher than decision tree whereas it is not here. The reason as to why is because of overfitting and the model that we built is too complex. To overcome this problem, we have to implement grid search to test out the suitable parameters but we don’t have sufficient computational power and time. Then if we look at the metrics for feedword neural network and gradient boosted trees, both of them have performed really well. FNN is a has an advantage of having the ability to represent more complex functions very easily. However, it is more prone to overfitting due to weight-sharing between nodes of the network. FNN has more number of false positives compared to GBT. So we would like to identify GBT as our best performing tensorflow model.
 
-
-
+ * ## PySpark
+ 
+<img width="305" alt="Screen Shot 2022-12-01 at 12 58 43" src="https://user-images.githubusercontent.com/57931555/204947718-97a60c3e-95f4-4202-8e5d-47a4951de970.png">
+All three models comparatively do not have a high number of false positives which is very vital to us. Naive Bayes is the worst because it has the lowest accuracy, recall and f1 score. A reason as to why is because it does not take into account the possible correlation between other features. There were higher false negatives which explains why its precision is lower than the other models as well. From all aspects, both Decision tree and Random Forest performed pretty well but random forest has yielded the best results.This is because it is less prone to overfitting than Decision Tree. Both models have predicted all the positive samples correctly. Therefore, the f1 score is higher which is pretty important to us to minimize credit risk.
 
 
